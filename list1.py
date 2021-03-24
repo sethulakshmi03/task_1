@@ -53,14 +53,15 @@ def sort_last(tuples):
     # +++your code here+++
     min = 10000000
     res_l =[]
+    n = []
     for tup in tuples:
-        if tup[-1]<min:
-            min = tup[-1]
-            res_l.insert(0,tup)
-        else:
-            res_l.append(tup)
+        n.append(tup[-1])
+    print(list(sorted(n)))
+    for i in list(sorted(n)):
+        for tup in tuples:
+            if i == tup[-1]:
+                res_l.append(tup)
     return res_l
-
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
